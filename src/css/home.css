@@ -6,6 +6,7 @@ body {
 
 /*home layout*/
 .home {
+  /* autoprefixer : off */
   display: grid;
   height: 100vh;
   grid-template-columns: 350px 1fr;
@@ -152,6 +153,10 @@ body {
 .primary-user {
   justify-self: end;
   margin: 5px 0;
+}
+
+.user{
+  grid-area: user;
 }
 
 .user p {
