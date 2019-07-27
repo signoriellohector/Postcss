@@ -6,59 +6,44 @@ body {
 
 /*home layout*/
 .home {
-  /* autoprefixer : off; */
-  display: -ms-grid;
+  /* autoprefixer : off */
   display: grid;
   height: 100vh;
-  -ms-grid-columns: 350px 1fr;
   grid-template-columns: 350px 1fr;
-  -ms-grid-rows: 1fr 0;
   grid-template-rows: 1fr 0;
-      grid-template-areas: "sidebar primary"
+  grid-template-areas: "sidebar primary"
                        "sidebar featuring";
 }
 .home.search-active {
-  -ms-grid-rows: 1fr 150px;
   grid-template-rows: 1fr 150px;
 }
 
 .home-sidebar {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 .home-primary {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: primary;
 }
 .home-featuring {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: featuring;
-  display: -ms-grid;
   display: grid;
 }
 .home-featuring img {
-  -ms-grid-row-align: center;
+  -ms-flex-item-align: center;
       align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 /*Sidebar*/
 .sidebar {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: auto 1fr 1fr;
   grid-template-rows: auto 1fr 1fr;
   background: #171929;
   color: white;
   padding: 1em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100vh;
   overflow: auto;
 }
@@ -111,13 +96,19 @@ body {
 }
 
 .playlistFriends-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 7px;
   font-size: .8em;
 }
 .playlistFriends-item a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   text-decoration: none;
 }
@@ -138,13 +129,10 @@ body {
 
 
 .home-primary {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "search user"
+  grid-template-areas: "search user"
                        "list list";
-  -ms-grid-rows: auto 1fr;
   grid-template-rows: auto 1fr;
-  -ms-grid-columns: 300px 1fr;
   grid-template-columns: 300px 1fr;
   padding: 10px;
   overflow: auto;
@@ -152,8 +140,6 @@ body {
 
 
 .search {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: search;
 }
 
@@ -165,29 +151,32 @@ body {
   font-size: 16px;
   width: 100%;
   border: none;
-  box-shadow: 0 0 10px #f0f0f0;
-  box-sizing: border-box;;
+  -webkit-box-shadow: 0 0 10px #f0f0f0;
+          box-shadow: 0 0 10px #f0f0f0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;;
 }
 .primary-search {
-  -ms-grid-row-align: center;
+  -ms-flex-item-align: center;
       align-self: center;
 }
 
 .primary-user {
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
   margin: 5px 0;
 }
 
 .user{
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: user;
 }
 
 .user p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 300;
   margin: 0;
 }
@@ -201,9 +190,6 @@ body {
 }
 
 .primary-list {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: list;
   overflow: auto;
 }
@@ -220,6 +206,8 @@ body {
   font-weight: 400;
 }
 .primaryPlaylist-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: auto;
 }
@@ -230,6 +218,7 @@ body {
 
 .primaryPlaylistItem {
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
   /*border: 1px solid blue;*/
 }
@@ -241,8 +230,8 @@ body {
 }
 
 .primaryPlaylistItem img {
-  width: 170px;
-  height: 256px;
+  width: 250px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -255,10 +244,15 @@ body {
 
 
 .featuring {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#ff458b));
   background: linear-gradient(to right, #ff0000, #ff458b);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 100px;
   color: white;
 }

@@ -7,6 +7,7 @@ module.exports = {
             feature:{
                 autoprefixer:{
                     grid:true,
+                    flexbox:false,
                 }
             }
         })
