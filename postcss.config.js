@@ -1,15 +1,15 @@
 module.exports = {
     plugins: [
-        // require('autoprefixer')({
-        //     grid:true
-        // }),
-        require('postcss-cssnext')({
-            feature:{
-                autoprefixer:{
-                    grid:true,
-                    flexbox:false,
-                }
-            }
+        // require('postcss-custom-media'),
+        require('postcss-apply'),
+        require('postcss-preset-env')({
+            stage: 0,
+            autoprefixer:{
+                grid:true,
+                flexbox: false,
+            },
+            preserve:false,
+            calc: false,
         })
     ]
 }

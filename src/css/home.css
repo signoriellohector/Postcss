@@ -2,13 +2,37 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+:root{
+  --darkColor: #15192a;
+  --lightColor:white;
+  --warnignColor: red;
+  --button:{
+      border: 1px solid var(--lightColor);
+      border-radius: 5px;
+      background: var(--darkColor);
+      color:var(--lightColor);
+      padding: .5em 2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size:14px;
+      border-bottom: 5px solod var(--lightColor);
+  }
+  --viewporHeight: 50vh;
+}
 
+.btn{
+  @apply --button;
+}
+
+.btn.warning{
+  background: var(--warnignColor);
+}
 
 /*home layout*/
 .home {
-  /* autoprefixer : off */
+  background: var(--lightColor);
   display: grid;
-  height: 100vh;
+  height: calc(var(--viewporHeight) * 2);
   grid-template-columns: 350px 1fr;
   grid-template-rows: 1fr 0;
   grid-template-areas: "sidebar primary"
@@ -38,7 +62,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr 1fr;
-  background: #171929;
+  background: var(--darkColor);
   color: white;
   padding: 1em;
   box-sizing: border-box;
@@ -48,7 +72,8 @@ body {
 
 /*Logo*/
 .logo {
-
+  width: calc(100% - 100px);
+  margin: 0 auto;
 }
 .logo-image {
   margin: 0;
@@ -256,5 +281,39 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+/* @custom-media --small screen and (max-width: 768px); */
+@custom-media --extra-small screen and (width <= 480px);
+@custom-media --small screen and (width < 768px);
+@custom-media --medium screen and (width >= 768px);
+@custom-media --large screen and (width > 1024px);
+
+
+@media (--small) {
+  body{
+    border: 10px solid blue;
+  }
+  .home{
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  }
+  .featuring{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    height: 150px;
+  }
+}
+
+@media (--extra-small){
+  body{
+    border: 10px solid orange;
   }
 }
