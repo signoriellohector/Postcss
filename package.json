@@ -9,16 +9,11 @@
   "author": "Signoriello Hector",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^9.6.1",
     "postcss-apply": "^0.12.0",
     "postcss-cli": "^6.1.3",
     "postcss-color-function": "^4.1.0",
     "postcss-color-hwb": "^3.0.0",
     "postcss-color-mod-function": "^3.0.3",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-custom-selector": "^1.0.0",
-    "postcss-custom-selectors": "^5.1.2",
     "postcss-preset-env": "^6.7.0"
   }
 }
