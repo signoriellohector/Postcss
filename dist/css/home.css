@@ -19,6 +19,33 @@ body {
   background: red;
 }
 
+/* @custom-selector :--nombreDelSelector .elemento > .hijo, .elemento2 > .hijo; */
+
+.checkbox:checked + .primaryPlaylist-list{
+  display: none;
+}
+
+.checkbox-label,.radio-label{
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 3px 7px;
+  border: 1px solid rgb(230, 0, 0);
+  border-bottom: 3px solid red;
+  color: rgb(119,119,119);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.checkbox-label:hover,.checkbox-label:active,.radio-label:hover,.radio-label:active{
+  background: red;
+  color: white;
+}
+
 /*home layout*/
 .home {
   background: white;

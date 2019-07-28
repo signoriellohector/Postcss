@@ -17,6 +17,8 @@
     "postcss-color-mod-function": "^3.0.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-media": "^7.0.8",
+    "postcss-custom-selector": "^1.0.0",
+    "postcss-custom-selectors": "^5.1.2",
     "postcss-preset-env": "^6.7.0"
   }
 }
