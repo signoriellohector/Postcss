@@ -4,6 +4,7 @@ module.exports = {
         require('postcss-color-mod-function'),
         require('postcss-color-hwb'),
         require('postcss-apply'),
+        require('postcss-import'),
         // require('postcss-custom-selectors'),
         require('postcss-preset-env')({
             stage: 0,
