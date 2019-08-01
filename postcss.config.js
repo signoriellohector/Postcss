@@ -28,5 +28,6 @@ module.exports = {
             calc: false,
         }),
         require('css-mqpacker'),
+        require('cssnano'),
     ]
 }
