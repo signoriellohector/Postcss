@@ -1,3 +1,7 @@
+.user{
+  grid-area: user;
+}
+
 .user p {
   display: flex;
   align-items: center;
